@@ -41,7 +41,7 @@ Asegúrate de tener instalado: **JDK 17+**, **Node.js (LTS)** con **npm/Yarn**, 
 ### 2. Clonar el Repositorio
 
 ```bash
-git https://github.com/rgarciaaa/user-management-system.git
+git clone https://github.com/rgarciaaa/user-management-system.git
 cd user-management-app
 ```
 
