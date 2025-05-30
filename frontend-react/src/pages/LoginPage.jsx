@@ -1,7 +1,8 @@
 import { useNavigate } from 'react-router-dom';
 import LoginForm from '../components/LoginForm';
 
-export default function LoginPage() {
+// Recibe onLoginSuccess como una prop
+export default function LoginPage({ onLoginSuccess }) {
   const navigate = useNavigate();
 
   const handleLogin = async ({ login, password }) => {
@@ -19,7 +20,8 @@ export default function LoginPage() {
 
       const user = await response.json();
 
-      sessionStorage.setItem('user', JSON.stringify(user));
+      onLoginSuccess(user);
+
       navigate('/home');
     } catch (err) {
       console.error(err);
